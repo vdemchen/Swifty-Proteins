@@ -7,21 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2442A509218291C8001A4436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A508218291C8001A4436 /* AppDelegate.swift */; };
-		2442A50B218291C8001A4436 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A50A218291C8001A4436 /* ViewController.swift */; };
-		2442A50E218291C8001A4436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442A50C218291C8001A4436 /* Main.storyboard */; };
 		2442A510218291CA001A4436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2442A50F218291CA001A4436 /* Assets.xcassets */; };
-		2442A513218291CA001A4436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442A511218291CA001A4436 /* LaunchScreen.storyboard */; };
+		2442A52E218292A6001A4436 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A51E218292A6001A4436 /* UIView.swift */; };
+		2442A52F218292A6001A4436 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A51F218292A6001A4436 /* UIAlertControllerExtension.swift */; };
+		2442A530218292A6001A4436 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A520218292A6001A4436 /* NSObjectExtension.swift */; };
+		2442A531218292A6001A4436 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A521218292A6001A4436 /* UIApplicationExtension.swift */; };
+		2442A532218292A6001A4436 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A524218292A6001A4436 /* BaseViewController.swift */; };
+		2442A533218292A6001A4436 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A525218292A6001A4436 /* BaseTableViewCell.swift */; };
+		2442A534218292A6001A4436 /* BaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2442A526218292A6001A4436 /* BaseTableViewCell.xib */; };
+		2442A536218292A6001A4436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A52A218292A6001A4436 /* AppDelegate.swift */; };
+		2442A537218292A6001A4436 /* ModelsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A52D218292A6001A4436 /* ModelsKeys.swift */; };
+		2442A53921829784001A4436 /* ligands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2442A53821829784001A4436 /* ligands.txt */; };
+		2442A53F2182983C001A4436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442A53E2182983C001A4436 /* LaunchScreen.storyboard */; };
+		2442A54121829856001A4436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442A54021829856001A4436 /* Main.storyboard */; };
+		2442A543218299BF001A4436 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A542218299BF001A4436 /* LoginViewController.swift */; };
+		2442A54521829A0F001A4436 /* ProteinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A54421829A0F001A4436 /* ProteinListViewController.swift */; };
+		2442A54721829A49001A4436 /* ProteinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A54621829A49001A4436 /* ProteinViewController.swift */; };
+		2442A54921829CBD001A4436 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2442A54821829CBD001A4436 /* LocalAuthentication.framework */; };
+		2442A54D2184D0EA001A4436 /* CurrentViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A54C2184D0EA001A4436 /* CurrentViewContoller.swift */; };
+		2442A55121850E62001A4436 /* ProteinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A54F21850E62001A4436 /* ProteinTableViewCell.swift */; };
+		2442A55221850E62001A4436 /* ProteinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2442A55021850E62001A4436 /* ProteinTableViewCell.xib */; };
+		2442A5542185128C001A4436 /* ProteinDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A5532185128C001A4436 /* ProteinDataModel.swift */; };
+		2442A55821853932001A4436 /* ProteinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A55721853932001A4436 /* ProteinService.swift */; };
+		2442A55A21853D83001A4436 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A55921853D83001A4436 /* NetworkService.swift */; };
+		F60D92F7B62249494869C1AE /* Pods_SwiftyProteins.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67D7B268448A0CF04AFF358 /* Pods_SwiftyProteins.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F390AE23DAE29984728819B /* Pods-SwiftyProteins.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteins.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins.release.xcconfig"; sourceTree = "<group>"; };
 		2442A505218291C8001A4436 /* SwiftyProteins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyProteins.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2442A508218291C8001A4436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2442A50A218291C8001A4436 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2442A50D218291C8001A4436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2442A50F218291CA001A4436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2442A512218291CA001A4436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2442A514218291CA001A4436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2442A51E218292A6001A4436 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		2442A51F218292A6001A4436 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		2442A520218292A6001A4436 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		2442A521218292A6001A4436 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		2442A524218292A6001A4436 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2442A525218292A6001A4436 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		2442A526218292A6001A4436 /* BaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseTableViewCell.xib; sourceTree = "<group>"; };
+		2442A52A218292A6001A4436 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2442A52D218292A6001A4436 /* ModelsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelsKeys.swift; sourceTree = "<group>"; };
+		2442A53821829784001A4436 /* ligands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ligands.txt; sourceTree = "<group>"; };
+		2442A53E2182983C001A4436 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2442A54021829856001A4436 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2442A542218299BF001A4436 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2442A54421829A0F001A4436 /* ProteinListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinListViewController.swift; sourceTree = "<group>"; };
+		2442A54621829A49001A4436 /* ProteinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinViewController.swift; sourceTree = "<group>"; };
+		2442A54821829CBD001A4436 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		2442A54C2184D0EA001A4436 /* CurrentViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentViewContoller.swift; sourceTree = "<group>"; };
+		2442A54F21850E62001A4436 /* ProteinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinTableViewCell.swift; sourceTree = "<group>"; };
+		2442A55021850E62001A4436 /* ProteinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProteinTableViewCell.xib; sourceTree = "<group>"; };
+		2442A5532185128C001A4436 /* ProteinDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinDataModel.swift; sourceTree = "<group>"; };
+		2442A55721853932001A4436 /* ProteinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinService.swift; sourceTree = "<group>"; };
+		2442A55921853D83001A4436 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		42B8C06C6925CE551F3DD066 /* Pods-SwiftyProteins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteins.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins.debug.xcconfig"; sourceTree = "<group>"; };
+		D67D7B268448A0CF04AFF358 /* Pods_SwiftyProteins.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyProteins.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2442A54921829CBD001A4436 /* LocalAuthentication.framework in Frameworks */,
+				F60D92F7B62249494869C1AE /* Pods_SwiftyProteins.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +80,12 @@
 		2442A4FC218291C7001A4436 = {
 			isa = PBXGroup;
 			children = (
-				2442A507218291C8001A4436 /* SwiftyProteins */,
+				A014ECC23C3C47158810D7D9 /* Frameworks */,
+				8281D37C84086A42DB4A9C35 /* Pods */,
 				2442A506218291C8001A4436 /* Products */,
+				2442A507218291C8001A4436 /* project */,
+				2442A51B21829241001A4436 /* resources */,
+				2442A51C218292A6001A4436 /* source */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,17 +97,162 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2442A507218291C8001A4436 /* SwiftyProteins */ = {
+		2442A507218291C8001A4436 /* project */ = {
 			isa = PBXGroup;
 			children = (
-				2442A508218291C8001A4436 /* AppDelegate.swift */,
-				2442A50A218291C8001A4436 /* ViewController.swift */,
-				2442A50C218291C8001A4436 /* Main.storyboard */,
-				2442A50F218291CA001A4436 /* Assets.xcassets */,
-				2442A511218291CA001A4436 /* LaunchScreen.storyboard */,
 				2442A514218291CA001A4436 /* Info.plist */,
 			);
-			path = SwiftyProteins;
+			path = project;
+			sourceTree = "<group>";
+		};
+		2442A51B21829241001A4436 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				2442A53821829784001A4436 /* ligands.txt */,
+				2442A50F218291CA001A4436 /* Assets.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		2442A51C218292A6001A4436 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				2442A51D218292A6001A4436 /* extension */,
+				2442A522218292A6001A4436 /* implementation */,
+				2442A52A218292A6001A4436 /* AppDelegate.swift */,
+				2442A52B218292A6001A4436 /* data */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		2442A51D218292A6001A4436 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				2442A51E218292A6001A4436 /* UIView.swift */,
+				2442A51F218292A6001A4436 /* UIAlertControllerExtension.swift */,
+				2442A520218292A6001A4436 /* NSObjectExtension.swift */,
+				2442A521218292A6001A4436 /* UIApplicationExtension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		2442A522218292A6001A4436 /* implementation */ = {
+			isa = PBXGroup;
+			children = (
+				2442A53D2182981B001A4436 /* storyboards */,
+				2442A523218292A6001A4436 /* base_elements */,
+				2442A527218292A6001A4436 /* controllers */,
+				2442A528218292A6001A4436 /* services */,
+			);
+			path = implementation;
+			sourceTree = "<group>";
+		};
+		2442A523218292A6001A4436 /* base_elements */ = {
+			isa = PBXGroup;
+			children = (
+				2442A524218292A6001A4436 /* BaseViewController.swift */,
+				2442A525218292A6001A4436 /* BaseTableViewCell.swift */,
+				2442A526218292A6001A4436 /* BaseTableViewCell.xib */,
+			);
+			path = base_elements;
+			sourceTree = "<group>";
+		};
+		2442A527218292A6001A4436 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2442A53C218297F5001A4436 /* ProteinViewController */,
+				2442A53B218297CD001A4436 /* ProteinListViewController */,
+				2442A53A218297BD001A4436 /* LoginViewController */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		2442A528218292A6001A4436 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				2442A54C2184D0EA001A4436 /* CurrentViewContoller.swift */,
+				2442A55721853932001A4436 /* ProteinService.swift */,
+				2442A55921853D83001A4436 /* NetworkService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		2442A52B218292A6001A4436 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				2442A52C218292A6001A4436 /* models */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		2442A52C218292A6001A4436 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2442A5532185128C001A4436 /* ProteinDataModel.swift */,
+				2442A52D218292A6001A4436 /* ModelsKeys.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		2442A53A218297BD001A4436 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2442A542218299BF001A4436 /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		2442A53B218297CD001A4436 /* ProteinListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2442A54E21850E25001A4436 /* ProteinTableViewCell */,
+				2442A54421829A0F001A4436 /* ProteinListViewController.swift */,
+			);
+			path = ProteinListViewController;
+			sourceTree = "<group>";
+		};
+		2442A53C218297F5001A4436 /* ProteinViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2442A54621829A49001A4436 /* ProteinViewController.swift */,
+			);
+			path = ProteinViewController;
+			sourceTree = "<group>";
+		};
+		2442A53D2182981B001A4436 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2442A53E2182983C001A4436 /* LaunchScreen.storyboard */,
+				2442A54021829856001A4436 /* Main.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		2442A54E21850E25001A4436 /* ProteinTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2442A54F21850E62001A4436 /* ProteinTableViewCell.swift */,
+				2442A55021850E62001A4436 /* ProteinTableViewCell.xib */,
+			);
+			path = ProteinTableViewCell;
+			sourceTree = "<group>";
+		};
+		8281D37C84086A42DB4A9C35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42B8C06C6925CE551F3DD066 /* Pods-SwiftyProteins.debug.xcconfig */,
+				1F390AE23DAE29984728819B /* Pods-SwiftyProteins.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A014ECC23C3C47158810D7D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2442A54821829CBD001A4436 /* LocalAuthentication.framework */,
+				D67D7B268448A0CF04AFF358 /* Pods_SwiftyProteins.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2442A517218291CA001A4436 /* Build configuration list for PBXNativeTarget "SwiftyProteins" */;
 			buildPhases = (
+				C45C70FACCE1F2427F356947 /* [CP] Check Pods Manifest.lock */,
 				2442A501218291C8001A4436 /* Sources */,
 				2442A502218291C8001A4436 /* Frameworks */,
 				2442A503218291C8001A4436 /* Resources */,
+				D1F5532F62557B56845E88C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,44 +315,85 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2442A513218291CA001A4436 /* LaunchScreen.storyboard in Resources */,
+				2442A534218292A6001A4436 /* BaseTableViewCell.xib in Resources */,
 				2442A510218291CA001A4436 /* Assets.xcassets in Resources */,
-				2442A50E218291C8001A4436 /* Main.storyboard in Resources */,
+				2442A54121829856001A4436 /* Main.storyboard in Resources */,
+				2442A55221850E62001A4436 /* ProteinTableViewCell.xib in Resources */,
+				2442A53F2182983C001A4436 /* LaunchScreen.storyboard in Resources */,
+				2442A53921829784001A4436 /* ligands.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C45C70FACCE1F2427F356947 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftyProteins-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1F5532F62557B56845E88C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-SwiftyJSON/Alamofire_SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2442A501218291C8001A4436 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2442A50B218291C8001A4436 /* ViewController.swift in Sources */,
-				2442A509218291C8001A4436 /* AppDelegate.swift in Sources */,
+				2442A543218299BF001A4436 /* LoginViewController.swift in Sources */,
+				2442A5542185128C001A4436 /* ProteinDataModel.swift in Sources */,
+				2442A52E218292A6001A4436 /* UIView.swift in Sources */,
+				2442A536218292A6001A4436 /* AppDelegate.swift in Sources */,
+				2442A531218292A6001A4436 /* UIApplicationExtension.swift in Sources */,
+				2442A55A21853D83001A4436 /* NetworkService.swift in Sources */,
+				2442A55121850E62001A4436 /* ProteinTableViewCell.swift in Sources */,
+				2442A54521829A0F001A4436 /* ProteinListViewController.swift in Sources */,
+				2442A54D2184D0EA001A4436 /* CurrentViewContoller.swift in Sources */,
+				2442A52F218292A6001A4436 /* UIAlertControllerExtension.swift in Sources */,
+				2442A533218292A6001A4436 /* BaseTableViewCell.swift in Sources */,
+				2442A54721829A49001A4436 /* ProteinViewController.swift in Sources */,
+				2442A537218292A6001A4436 /* ModelsKeys.swift in Sources */,
+				2442A55821853932001A4436 /* ProteinService.swift in Sources */,
+				2442A530218292A6001A4436 /* NSObjectExtension.swift in Sources */,
+				2442A532218292A6001A4436 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		2442A50C218291C8001A4436 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2442A50D218291C8001A4436 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2442A511218291CA001A4436 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2442A512218291CA001A4436 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2442A515218291CA001A4436 /* Debug */ = {
@@ -280,11 +514,12 @@
 		};
 		2442A518218291CA001A4436 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42B8C06C6925CE551F3DD066 /* Pods-SwiftyProteins.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZPKV52D2F2;
-				INFOPLIST_FILE = SwiftyProteins/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +533,12 @@
 		};
 		2442A519218291CA001A4436 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F390AE23DAE29984728819B /* Pods-SwiftyProteins.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZPKV52D2F2;
-				INFOPLIST_FILE = SwiftyProteins/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

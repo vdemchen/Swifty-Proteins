@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MTA-Di-28F">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="yLf-M6-Cdy">
+            <objects>
+                <navigationController id="MTA-Di-28F" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iAm-0P-RvQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fJs-du-YQO" kind="relationship" relationship="rootViewController" id="A3x-tp-KtY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UGX-m3-KOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-894" y="-575"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="8Qs-m0-omy">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="fJs-du-YQO" customClass="LoginViewController" customModule="SwiftyProteins" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7k5-Yb-hha">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-pA-cOB">
+                                <rect key="frame" x="159" y="181" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="TouchID"/>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="fJs-du-YQO" eventType="touchUpInside" id="xeU-i0-XwK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="B7C-sG-UHt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w7x-jX-DXF"/>
+                    <connections>
+                        <outlet property="login" destination="ZMa-pA-cOB" id="aMI-P6-Ccp"/>
+                        <segue destination="SDi-kL-BzF" kind="show" identifier="ProteinListViewController" id="XB3-zU-pjy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WKS-7G-lTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="-575"/>
+        </scene>
+        <!--Protein List View Controller-->
+        <scene sceneID="j4s-2Q-uBm">
+            <objects>
+                <viewController id="SDi-kL-BzF" customClass="ProteinListViewController" customModule="SwiftyProteins" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F0z-7P-Ixy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZmJ-GJ-7Tv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="SDi-kL-BzF" id="pee-vh-ZyX"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qs2-Mf-P85">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SDi-kL-BzF" id="k3T-DN-chp"/>
+                                    <outlet property="delegate" destination="SDi-kL-BzF" id="1Ph-IQ-qRI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZmJ-GJ-7Tv" firstAttribute="top" secondItem="APp-mn-EvC" secondAttribute="top" id="7LW-qE-Teg"/>
+                            <constraint firstItem="ZmJ-GJ-7Tv" firstAttribute="leading" secondItem="APp-mn-EvC" secondAttribute="leading" id="CWZ-na-bsD"/>
+                            <constraint firstItem="Qs2-Mf-P85" firstAttribute="top" secondItem="ZmJ-GJ-7Tv" secondAttribute="bottom" id="FE7-Vi-OUv"/>
+                            <constraint firstItem="Qs2-Mf-P85" firstAttribute="leading" secondItem="APp-mn-EvC" secondAttribute="leading" id="Xrw-Kz-f0G"/>
+                            <constraint firstItem="APp-mn-EvC" firstAttribute="bottom" secondItem="Qs2-Mf-P85" secondAttribute="bottom" id="cbG-gZ-Hmw"/>
+                            <constraint firstItem="APp-mn-EvC" firstAttribute="trailing" secondItem="Qs2-Mf-P85" secondAttribute="trailing" id="fqH-Zt-2YH"/>
+                            <constraint firstItem="ZmJ-GJ-7Tv" firstAttribute="trailing" secondItem="APp-mn-EvC" secondAttribute="trailing" id="iKZ-TH-GxQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="APp-mn-EvC"/>
+                    </view>
+                    <connections>
+                        <outlet property="proteinSearchBar" destination="ZmJ-GJ-7Tv" id="wki-mN-Akl"/>
+                        <outlet property="proteinsTableView" destination="Qs2-Mf-P85" id="uRM-gg-XCi"/>
+                        <segue destination="aTU-lH-fG4" kind="show" identifier="ProteinViewController" id="ZJb-xm-IYe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXG-oD-qh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="-575"/>
+        </scene>
+        <!--Protein View Controller-->
+        <scene sceneID="d3a-7g-s1t">
+            <objects>
+                <viewController id="aTU-lH-fG4" customClass="ProteinViewController" customModule="SwiftyProteins" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kiJ-Fz-ujD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fX8-HM-vYS">
+                                <rect key="frame" x="16" y="104" width="343" height="523"/>
+                            </sceneKitView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BtI-sD-HWf" firstAttribute="trailing" secondItem="fX8-HM-vYS" secondAttribute="trailing" constant="16" id="CHP-Xc-hxa"/>
+                            <constraint firstItem="fX8-HM-vYS" firstAttribute="top" secondItem="BtI-sD-HWf" secondAttribute="top" constant="40" id="k62-SW-B2F"/>
+                            <constraint firstItem="fX8-HM-vYS" firstAttribute="leading" secondItem="BtI-sD-HWf" secondAttribute="leading" constant="16" id="ui2-r1-Ljv"/>
+                            <constraint firstItem="BtI-sD-HWf" firstAttribute="bottom" secondItem="fX8-HM-vYS" secondAttribute="bottom" constant="40" id="uiN-Yr-hPA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BtI-sD-HWf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VH4-9o-c4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1655" y="-575"/>
+        </scene>
+    </scenes>
+</document>
