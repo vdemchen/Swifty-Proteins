@@ -5,10 +5,17 @@ class SetupScene: SCNScene{
     //MARK: - Public properties
     var atoms: [SCNNode] = []
     
+    //MARK: - Private properties
+    private var changeAtom = Bool()
+    private var manageLines = Bool()
     
     //MARK: - Initialization
-    init(_ data: [String]) {
+    init(_ data: [String], _ changeAtom: Bool, _ manageLines: Bool) {
+        
         super.init()
+        
+        self.changeAtom = changeAtom
+        self.manageLines = manageLines
         self.sceneConfiguration(data)
     }
     
@@ -18,9 +25,15 @@ class SetupScene: SCNScene{
     
     //MARK: - Private methods
     private func sceneConfiguration(_ data: [String]){
-        let sphereGeometry = SCNSphere(radius: 0.3)
-        let sphereNode = SCNNode(geometry: sphereGeometry)
-        self.atoms.append(sphereNode)
+        if !changeAtom{
+            let sphereGeometry = SCNSphere(radius: 0.3)
+            let sphereNode = SCNNode(geometry: sphereGeometry)
+            self.atoms.append(sphereNode)
+        }else {
+            let boxGeometry = SCNBox(width: 0.7, height: 0.7, length: 0.7, chamferRadius: 1)
+            let boxNode = SCNNode(geometry: boxGeometry)
+            self.atoms.append(boxNode)
+        }
         
         for item in data {
             var itemStruct: [String] = item.components(separatedBy: " ")
@@ -28,19 +41,26 @@ class SetupScene: SCNScene{
             guard itemStruct.count > 0
                 && (itemStruct[ModelsKeys.keyType] == ModelsKeys.keyAtom
                     || itemStruct[ModelsKeys.keyType] == ModelsKeys.keyConect) else { return }
-            if itemStruct[ModelsKeys.keyType] == ModelsKeys.keyAtom{
-                self.atoms.append(self.getAtom(itemStruct))
+            
+            if itemStruct[ModelsKeys.keyType] == ModelsKeys.keyAtom && !changeAtom{
+                self.atoms.append(self.getAtomSphere(itemStruct))
             }
-            if itemStruct[ModelsKeys.keyType] == ModelsKeys.keyConect{
+            
+            if itemStruct[ModelsKeys.keyType] == ModelsKeys.keyAtom && changeAtom{
+                self.atoms.append(self.getAtomSquer(itemStruct))
+            }
+            
+            if itemStruct[ModelsKeys.keyType] == ModelsKeys.keyConect
+                && !self.manageLines{
                 self.getConnect(itemStruct)
             }
         }
         
     }
     
-    private func getAtom(_ item: [String]) -> SCNNode{
+    private func getAtomSphere(_ item: [String]) -> SCNNode{
         
-        let newSphereGeometry: SCNSphere = SCNSphere(radius: 0.3)
+        let newSphereGeometry: SCNSphere = SCNSphere(radius: 0.35)
         newSphereGeometry.firstMaterial?.diffuse.contents = self.getColor(item[ModelsKeys.keyElementSymbol])
         newSphereGeometry.firstMaterial?.specular.contents = self.getColor(item[ModelsKeys.keyElementSymbol])
         let newSphereNode: SCNNode = SCNNode(geometry: newSphereGeometry)
@@ -54,6 +74,24 @@ class SetupScene: SCNScene{
         self.rootNode.addChildNode(newSphereNode)
         
         return newSphereNode
+    }
+    
+    private func getAtomSquer(_ item: [String]) -> SCNNode{
+        
+        let newBoxGeometry: SCNBox = SCNBox(width: 0.7, height: 0.7, length: 0.7, chamferRadius: 0.0)
+        newBoxGeometry.firstMaterial?.diffuse.contents = self.getColor(item[ModelsKeys.keyElementSymbol])
+        newBoxGeometry.firstMaterial?.specular.contents = self.getColor(item[ModelsKeys.keyElementSymbol])
+        let newBoxNode: SCNNode = SCNNode(geometry: newBoxGeometry)
+        
+        newBoxNode.position = SCNVector3(
+            Float(item[ModelsKeys.keyPointX]) ?? 0.0,
+            Float(item[ModelsKeys.keyPointY]) ?? 0.0,
+            Float(item[ModelsKeys.keyPointZ]) ?? 0.0
+        )
+        newBoxNode.name = item[ModelsKeys.keyElementSymbol]
+        self.rootNode.addChildNode(newBoxNode)
+        
+        return newBoxNode
     }
     
     private func getConnect(_ item: [String]){
