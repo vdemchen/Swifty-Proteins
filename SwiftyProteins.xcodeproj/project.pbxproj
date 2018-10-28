@@ -32,6 +32,7 @@
 		2442A55A21853D83001A4436 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A55921853D83001A4436 /* NetworkService.swift */; };
 		2442A55C21856503001A4436 /* ErrorHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A55B21856503001A4436 /* ErrorHandle.swift */; };
 		2442A55F218588BB001A4436 /* SceneSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A55E218588BA001A4436 /* SceneSetup.swift */; };
+		2442A5632185F461001A4436 /* SCNNodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A5622185F461001A4436 /* SCNNodeExtension.swift */; };
 		F60D92F7B62249494869C1AE /* Pods_SwiftyProteins.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67D7B268448A0CF04AFF358 /* Pods_SwiftyProteins.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		2442A55921853D83001A4436 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2442A55B21856503001A4436 /* ErrorHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandle.swift; sourceTree = "<group>"; };
 		2442A55E218588BA001A4436 /* SceneSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneSetup.swift; sourceTree = "<group>"; };
+		2442A5622185F461001A4436 /* SCNNodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNNodeExtension.swift; sourceTree = "<group>"; };
 		42B8C06C6925CE551F3DD066 /* Pods-SwiftyProteins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteins.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins.debug.xcconfig"; sourceTree = "<group>"; };
 		D67D7B268448A0CF04AFF358 /* Pods_SwiftyProteins.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyProteins.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 				2442A51F218292A6001A4436 /* UIAlertControllerExtension.swift */,
 				2442A520218292A6001A4436 /* NSObjectExtension.swift */,
 				2442A521218292A6001A4436 /* UIApplicationExtension.swift */,
+				2442A5622185F461001A4436 /* SCNNodeExtension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				2442A54D2184D0EA001A4436 /* CurrentViewContoller.swift in Sources */,
 				2442A52F218292A6001A4436 /* UIAlertControllerExtension.swift in Sources */,
 				2442A533218292A6001A4436 /* BaseTableViewCell.swift in Sources */,
+				2442A5632185F461001A4436 /* SCNNodeExtension.swift in Sources */,
 				2442A54721829A49001A4436 /* ProteinViewController.swift in Sources */,
 				2442A537218292A6001A4436 /* ModelsKeys.swift in Sources */,
 				2442A55821853932001A4436 /* ProteinService.swift in Sources */,

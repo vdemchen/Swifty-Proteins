@@ -1,9 +1,8 @@
 import SceneKit
 
-class SetupScene: SCNScene {
+class SetupScene: SCNScene{
     
     //MARK: - Public properties
-    let scene = SCNScene()
     var atoms: [SCNNode] = []
     
     
@@ -17,26 +16,24 @@ class SetupScene: SCNScene {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Public methods
-    func getScene() -> SCNScene { return self.scene }
-    
     //MARK: - Private methods
     private func sceneConfiguration(_ data: [String]){
-        let sphereGeometry = SCNSphere(radius: 0.5)
+        let sphereGeometry = SCNSphere(radius: 0.3)
         let sphereNode = SCNNode(geometry: sphereGeometry)
         self.atoms.append(sphereNode)
         
         for item in data {
             var itemStruct: [String] = item.components(separatedBy: " ")
             itemStruct = itemStruct.filter({(item) -> Bool in item != ""})
-            guard itemStruct.count > 0 else { return }
+            guard itemStruct.count > 0
+                && (itemStruct[ModelsKeys.keyType] == ModelsKeys.keyAtom
+                    || itemStruct[ModelsKeys.keyType] == ModelsKeys.keyConect) else { return }
             if itemStruct[ModelsKeys.keyType] == ModelsKeys.keyAtom{
                 self.atoms.append(self.getAtom(itemStruct))
             }
             if itemStruct[ModelsKeys.keyType] == ModelsKeys.keyConect{
                 self.getConnect(itemStruct)
             }
- 
         }
         
     }
@@ -44,6 +41,8 @@ class SetupScene: SCNScene {
     private func getAtom(_ item: [String]) -> SCNNode{
         
         let newSphereGeometry: SCNSphere = SCNSphere(radius: 0.3)
+        newSphereGeometry.firstMaterial?.diffuse.contents = self.getColor(item[ModelsKeys.keyElementSymbol])
+        newSphereGeometry.firstMaterial?.specular.contents = self.getColor(item[ModelsKeys.keyElementSymbol])
         let newSphereNode: SCNNode = SCNNode(geometry: newSphereGeometry)
         
         newSphereNode.position = SCNVector3(
@@ -52,8 +51,6 @@ class SetupScene: SCNScene {
             Float(item[ModelsKeys.keyPointZ]) ?? 0.0
         )
         newSphereNode.name = item[ModelsKeys.keyElementSymbol]
-        newSphereNode.light?.color = self.getColor(item[ModelsKeys.keyElementSymbol])
-        
         self.rootNode.addChildNode(newSphereNode)
         
         return newSphereNode
@@ -68,31 +65,13 @@ class SetupScene: SCNScene {
         
         for element in allConects{
             guard let endPoint: Int = Int(element) else { return }
-            let connect = connectBetweenTwoNodes(from: self.atoms[startPoint], to: self.atoms[endPoint])
-            self.rootNode.addChildNode(connect)
+            
+            let conect = SCNNode()
+            self.rootNode.addChildNode(conect.connectBetweenTwoNodes(from: atoms[startPoint], to: atoms[endPoint]))
+        
         }
         
         
-    }
-    
-    private func connectBetweenTwoNodes(from nodeA: SCNNode, to nodeB: SCNNode) -> SCNNode {
-        
-        var index: [Int32.Type] = [Int32.self, Int32.self]
-        let position: [SCNVector3] = [nodeA.position, nodeB.position]
-        let vertexSource: SCNGeometrySource = SCNGeometrySource(vertices: position)
-        let indexData: Data = Data(bytes: &index, count:MemoryLayout<Int32>.size * index.count)
-        
-        let element: SCNGeometryElement = SCNGeometryElement(
-            data: indexData,
-            primitiveType: .line,
-            primitiveCount: 1,
-            bytesPerIndex: MemoryLayout<Int32>.size
-        )
-        
-        let line: SCNGeometry = SCNGeometry(sources: [vertexSource], elements: [element])
-        let lineNode: SCNNode = SCNNode(geometry: line)
-        
-        return lineNode
     }
     
     private func getColor(_ atom: String) -> UIColor{

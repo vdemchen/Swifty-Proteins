@@ -34,8 +34,9 @@ class ProteinViewController: UIViewController {
         
         let scene = SetupScene(data)
         
-        self.sceneView.scene = scene.getScene()
         self.sceneView.allowsCameraControl = true
         self.sceneView.backgroundColor = UIColor.gray
+        
+        self.sceneView.scene = scene
     }
 }
