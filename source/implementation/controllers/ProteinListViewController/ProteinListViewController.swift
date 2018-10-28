@@ -102,9 +102,12 @@ extension ProteinListViewController: UITableViewDelegate{
         if list.contains(where: { (item) -> Bool in
             return item.name == proteinName  && item.ligand == nil ? true : false
         }){
-            self.proteins.addLigandToItem(proteinName) { (isDownload) in
-                if isDownload {
+            self.proteins.addLigandToItem(proteinName) { (response) in
+                switch response {
+                case .success(_):
                     self.performSegue(withIdentifier: ProteinViewController.className(), sender: nil)
+                case .error(let result):
+                    self.showErrorAlertWith(message: result.value)
                 }
             }
         } else if list.contains(where: { (item) -> Bool in

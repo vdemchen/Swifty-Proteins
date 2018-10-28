@@ -122,6 +122,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BtI-sD-HWf"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="fX8-HM-vYS" id="tv4-wp-fxd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VH4-9o-c4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

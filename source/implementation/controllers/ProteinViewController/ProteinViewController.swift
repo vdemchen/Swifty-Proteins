@@ -1,21 +1,13 @@
 import UIKit
+import SceneKit
 
 class ProteinViewController: UIViewController {
+    @IBOutlet weak var sceneView: SCNView!
     var protein: Protein = Protein()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var ligand: String = String()
-        
-        if let _ : [String] = protein.ligand{
-            ligand = "have"
-        }else {
-            ligand = "nil"
-        }
+//        var ligand: String = String()
 
-        print(protein.ligand)
-        
-        self.showAlertWith(title: protein.name + " ligand: " + ligand)
-        
     }
 }

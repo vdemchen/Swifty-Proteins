@@ -45,9 +45,8 @@ class ProteinDataModel: NSObject{
     }
     
     //MARK: - Public methods
-    func addLigandToItem(_ name: String, complition: @escaping(Bool)->()){
-        guard let list: [Protein] = self.list else { return false }
-        var isFind: Bool = false
+    func addLigandToItem(_ name: String, complition: @escaping(ErrorHandle)->()){
+        guard let list: [Protein] = self.list else { return }
         var count: Int =  0
         var editItemIndex: Int? = nil
         
@@ -57,16 +56,21 @@ class ProteinDataModel: NSObject{
             }
             count = count + 1
         })
-        guard editItemIndex != nil else {return false}
+        guard editItemIndex != nil else { return }
         self.list?.remove(at: editItemIndex!)
         
-        ProteinService.downloadLigandDataToItem(name) { (ligand) in
+        ProteinService.downloadLigandDataToItem(name) { (response) in
             
-            let newItem: Protein = Protein(name: name, ligand: ligand)
-            self.list?.insert(newItem, at: editItemIndex!)
-            isFind = true
+            switch response{
+            case .success(let result):
+                let newItem: Protein = Protein(name: name, ligand: result.value)
+                self.list?.insert(newItem, at: editItemIndex!)
+                complition(ErrorHandle.success(Success(value: [String]())))
+            case .error(let result):
+                print(result.value)
+                complition(ErrorHandle.error(Error(value: "Can`t download Ligard from web page")))
+            }
         }
-        return isFind
     }
     
     //MARK: - Private methods

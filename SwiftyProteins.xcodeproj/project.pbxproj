@@ -30,6 +30,7 @@
 		2442A5542185128C001A4436 /* ProteinDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A5532185128C001A4436 /* ProteinDataModel.swift */; };
 		2442A55821853932001A4436 /* ProteinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A55721853932001A4436 /* ProteinService.swift */; };
 		2442A55A21853D83001A4436 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A55921853D83001A4436 /* NetworkService.swift */; };
+		2442A55C21856503001A4436 /* ErrorHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A55B21856503001A4436 /* ErrorHandle.swift */; };
 		F60D92F7B62249494869C1AE /* Pods_SwiftyProteins.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67D7B268448A0CF04AFF358 /* Pods_SwiftyProteins.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		2442A5532185128C001A4436 /* ProteinDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinDataModel.swift; sourceTree = "<group>"; };
 		2442A55721853932001A4436 /* ProteinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinService.swift; sourceTree = "<group>"; };
 		2442A55921853D83001A4436 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2442A55B21856503001A4436 /* ErrorHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandle.swift; sourceTree = "<group>"; };
 		42B8C06C6925CE551F3DD066 /* Pods-SwiftyProteins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteins.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins.debug.xcconfig"; sourceTree = "<group>"; };
 		D67D7B268448A0CF04AFF358 /* Pods_SwiftyProteins.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyProteins.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 				2442A54C2184D0EA001A4436 /* CurrentViewContoller.swift */,
 				2442A55721853932001A4436 /* ProteinService.swift */,
 				2442A55921853D83001A4436 /* NetworkService.swift */,
+				2442A55B21856503001A4436 /* ErrorHandle.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 		2442A53C218297F5001A4436 /* ProteinViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2442A55D21857DFB001A4436 /* ProteinScene */,
 				2442A54621829A49001A4436 /* ProteinViewController.swift */,
 			);
 			path = ProteinViewController;
@@ -235,6 +239,13 @@
 				2442A55021850E62001A4436 /* ProteinTableViewCell.xib */,
 			);
 			path = ProteinTableViewCell;
+			sourceTree = "<group>";
+		};
+		2442A55D21857DFB001A4436 /* ProteinScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProteinScene;
 			sourceTree = "<group>";
 		};
 		8281D37C84086A42DB4A9C35 /* Pods */ = {
@@ -353,14 +364,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Alamofire-SwiftyJSON/Alamofire_SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -378,6 +385,7 @@
 				2442A5542185128C001A4436 /* ProteinDataModel.swift in Sources */,
 				2442A52E218292A6001A4436 /* UIView.swift in Sources */,
 				2442A536218292A6001A4436 /* AppDelegate.swift in Sources */,
+				2442A55C21856503001A4436 /* ErrorHandle.swift in Sources */,
 				2442A531218292A6001A4436 /* UIApplicationExtension.swift in Sources */,
 				2442A55A21853D83001A4436 /* NetworkService.swift in Sources */,
 				2442A55121850E62001A4436 /* ProteinTableViewCell.swift in Sources */,
