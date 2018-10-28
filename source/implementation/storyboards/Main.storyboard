@@ -12,7 +12,7 @@
         <!--Navigation Controller-->
         <scene sceneID="yLf-M6-Cdy">
             <objects>
-                <navigationController id="MTA-Di-28F" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MTA-Di-28F" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iAm-0P-RvQ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -33,20 +33,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-pA-cOB">
-                                <rect key="frame" x="159" y="181" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="TouchID"/>
-                                <connections>
-                                    <action selector="loginButtonClicked:" destination="fJs-du-YQO" eventType="touchUpInside" id="xeU-i0-XwK"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="N8s-Fc-hz4">
+                                <rect key="frame" x="146.5" y="266.5" width="82" height="134.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCp-Uq-fpL">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="33.5"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-pA-cOB">
+                                        <rect key="frame" x="0.0" y="94.5" width="82" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="TouchID"/>
+                                        <connections>
+                                            <action selector="loginButtonClicked:" destination="fJs-du-YQO" eventType="touchUpInside" id="xeU-i0-XwK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N8s-Fc-hz4" firstAttribute="centerX" secondItem="7k5-Yb-hha" secondAttribute="centerX" id="t4K-sD-8pz"/>
+                            <constraint firstItem="N8s-Fc-hz4" firstAttribute="centerY" secondItem="7k5-Yb-hha" secondAttribute="centerY" id="yC5-Jw-Xq7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="B7C-sG-UHt"/>
                     </view>
                     <navigationItem key="navigationItem" id="w7x-jX-DXF"/>
                     <connections>
+                        <outlet property="infoLabel" destination="VCp-Uq-fpL" id="h5y-ox-A7S"/>
                         <outlet property="login" destination="ZMa-pA-cOB" id="aMI-P6-Ccp"/>
                         <segue destination="SDi-kL-BzF" kind="show" identifier="ProteinListViewController" id="XB3-zU-pjy"/>
                     </connections>
@@ -134,6 +151,7 @@
                             <constraint firstItem="CKR-rJ-1dG" firstAttribute="leading" secondItem="BtI-sD-HWf" secondAttribute="leading" constant="15" id="42k-kS-mwy"/>
                             <constraint firstItem="BtI-sD-HWf" firstAttribute="trailing" secondItem="fX8-HM-vYS" secondAttribute="trailing" constant="16" id="CHP-Xc-hxa"/>
                             <constraint firstItem="CKR-rJ-1dG" firstAttribute="top" secondItem="fX8-HM-vYS" secondAttribute="bottom" constant="5" id="Grf-Ru-Pyh"/>
+                            <constraint firstItem="fX8-HM-vYS" firstAttribute="top" secondItem="BtI-sD-HWf" secondAttribute="top" id="Kxm-jD-u0c"/>
                             <constraint firstItem="BtI-sD-HWf" firstAttribute="trailing" secondItem="2fI-tm-3sV" secondAttribute="trailing" constant="15" id="MPS-6G-Twj"/>
                             <constraint firstItem="BtI-sD-HWf" firstAttribute="bottom" secondItem="2fI-tm-3sV" secondAttribute="bottom" constant="20" id="OTp-Ib-mXe"/>
                             <constraint firstItem="2fI-tm-3sV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CKR-rJ-1dG" secondAttribute="trailing" id="fzO-gv-tcz"/>

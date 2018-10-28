@@ -6,6 +6,7 @@ class LoginViewController: UIViewController {
     //MARK: - IBOutlet
     
     @IBOutlet weak var login: UIButton!
+    @IBOutlet weak var infoLabel: UILabel!
     
     //MARK: - Public properties
     var сontext = LAContext()
@@ -14,19 +15,16 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Start
-        // Delete after finish
-//        let _  = ReadFileService.getProteins()
-        self.performSegue(withIdentifier: ProteinListViewController.className(), sender: nil)
-        // End
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: ModelsKeys.keyBackGroud)!)
         
         if !self.сontext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
             
             if let loginButton: UIButton = self.login {
                 loginButton.isHidden = true
+                self.infoLabel.text = "Sorry, but only users \nwith touchID can log in!"
             }
-            
+        } else {
+            self.infoLabel.text = "Please, press \nthe button to log in!"
         }
         
         CurrentViewContoller.shared.currentViewController = self
@@ -58,9 +56,4 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
-    
-    
-    
-    
 }

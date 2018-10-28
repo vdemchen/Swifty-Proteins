@@ -113,6 +113,7 @@ extension ProteinListViewController: UITableViewDelegate{
         } else if list.contains(where: { (item) -> Bool in
             return item.name == proteinName  && item.ligand != nil ? true : false
         }){
+            ActivityIndicatorView.showActivity()
             self.performSegue(withIdentifier: ProteinViewController.className(), sender: nil)
         }
         else {

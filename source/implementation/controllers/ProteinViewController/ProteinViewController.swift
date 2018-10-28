@@ -18,14 +18,15 @@ class ProteinViewController: UIViewController {
     // MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setButtons()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         sceneSetup()
         setButtons()
+        addShareButton()
+        CurrentViewContoller.shared.currentViewController = self
+        ActivityIndicatorView.hideAllActivity()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -36,7 +37,6 @@ class ProteinViewController: UIViewController {
     }
     
     // MARK: - IBAction
-    
     @IBAction func changeAtom(_ sender: Any){
         self.changeAtom = !self.changeAtom
         self.viewDidAppear(true)
@@ -51,7 +51,7 @@ class ProteinViewController: UIViewController {
     // MARK: - Private methods
     private func setButtons() {
         if !changeAtom{
-            self.changeAtomView.setTitle("To squrs", for: .normal)
+            self.changeAtomView.setTitle("To square", for: .normal)
         } else {
             self.changeAtomView.setTitle("To sphere", for: .normal)
         }
@@ -61,6 +61,24 @@ class ProteinViewController: UIViewController {
         } else {
             self.offLineBetweenAtoms.setTitle("Show lines", for: .normal)
         }
+    }
+    
+    private func addShareButton(){
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Share",
+            style: .done,
+            target: self,
+            action: #selector(displayShareSheet)
+        )
+    }
+    
+    @objc private func displayShareSheet() {
+        let screenShot = sceneView.snapshot()
+        
+        let activityViewController = UIActivityViewController(activityItems: [screenShot as UIImage], applicationActivities: nil)
+        activityViewController.setEditing(true, animated: true)
+        
+        present(activityViewController, animated: true, completion: {})
     }
     
     // MARK: - Scene

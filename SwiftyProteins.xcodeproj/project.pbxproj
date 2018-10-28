@@ -33,6 +33,10 @@
 		2442A55C21856503001A4436 /* ErrorHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A55B21856503001A4436 /* ErrorHandle.swift */; };
 		2442A55F218588BB001A4436 /* SceneSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A55E218588BA001A4436 /* SceneSetup.swift */; };
 		2442A5632185F461001A4436 /* SCNNodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A5622185F461001A4436 /* SCNNodeExtension.swift */; };
+		2442A5A121862FBD001A4436 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2442A5A021862FBD001A4436 /* background.png */; };
+		2442A5A6218636AB001A4436 /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2442A5A4218636AB001A4436 /* ActivityIndicatorView.xib */; };
+		2442A5A7218636AB001A4436 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A5A5218636AB001A4436 /* ActivityIndicatorView.swift */; };
+		2442A5A921863A96001A4436 /* alliance_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2442A5A821863A96001A4436 /* alliance_background.jpg */; };
 		F60D92F7B62249494869C1AE /* Pods_SwiftyProteins.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67D7B268448A0CF04AFF358 /* Pods_SwiftyProteins.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,11 @@
 		2442A55B21856503001A4436 /* ErrorHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandle.swift; sourceTree = "<group>"; };
 		2442A55E218588BA001A4436 /* SceneSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneSetup.swift; sourceTree = "<group>"; };
 		2442A5622185F461001A4436 /* SCNNodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNNodeExtension.swift; sourceTree = "<group>"; };
+		2442A5642186173A001A4436 /* SwiftyProteins.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftyProteins.entitlements; sourceTree = "<group>"; };
+		2442A5A021862FBD001A4436 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		2442A5A4218636AB001A4436 /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
+		2442A5A5218636AB001A4436 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		2442A5A821863A96001A4436 /* alliance_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alliance_background.jpg; sourceTree = "<group>"; };
 		42B8C06C6925CE551F3DD066 /* Pods-SwiftyProteins.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyProteins.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyProteins/Pods-SwiftyProteins.debug.xcconfig"; sourceTree = "<group>"; };
 		D67D7B268448A0CF04AFF358 /* Pods_SwiftyProteins.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyProteins.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,6 +95,7 @@
 		2442A4FC218291C7001A4436 = {
 			isa = PBXGroup;
 			children = (
+				2442A5642186173A001A4436 /* SwiftyProteins.entitlements */,
 				A014ECC23C3C47158810D7D9 /* Frameworks */,
 				8281D37C84086A42DB4A9C35 /* Pods */,
 				2442A506218291C8001A4436 /* Products */,
@@ -114,6 +124,8 @@
 		2442A51B21829241001A4436 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				2442A5A821863A96001A4436 /* alliance_background.jpg */,
+				2442A5A021862FBD001A4436 /* background.png */,
 				2442A53821829784001A4436 /* ligands.txt */,
 				2442A50F218291CA001A4436 /* Assets.xcassets */,
 			);
@@ -167,6 +179,7 @@
 		2442A527218292A6001A4436 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2442A5A2218636AB001A4436 /* custom_elements */,
 				2442A53C218297F5001A4436 /* ProteinViewController */,
 				2442A53B218297CD001A4436 /* ProteinListViewController */,
 				2442A53A218297BD001A4436 /* LoginViewController */,
@@ -254,6 +267,23 @@
 			path = ProteinScene;
 			sourceTree = "<group>";
 		};
+		2442A5A2218636AB001A4436 /* custom_elements */ = {
+			isa = PBXGroup;
+			children = (
+				2442A5A3218636AB001A4436 /* ActivityIndicatorView */,
+			);
+			path = custom_elements;
+			sourceTree = "<group>";
+		};
+		2442A5A3218636AB001A4436 /* ActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				2442A5A4218636AB001A4436 /* ActivityIndicatorView.xib */,
+				2442A5A5218636AB001A4436 /* ActivityIndicatorView.swift */,
+			);
+			path = ActivityIndicatorView;
+			sourceTree = "<group>";
+		};
 		8281D37C84086A42DB4A9C35 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +336,11 @@
 				TargetAttributes = {
 					2442A504218291C8001A4436 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -334,10 +369,13 @@
 			files = (
 				2442A534218292A6001A4436 /* BaseTableViewCell.xib in Resources */,
 				2442A510218291CA001A4436 /* Assets.xcassets in Resources */,
+				2442A5A121862FBD001A4436 /* background.png in Resources */,
 				2442A54121829856001A4436 /* Main.storyboard in Resources */,
 				2442A55221850E62001A4436 /* ProteinTableViewCell.xib in Resources */,
+				2442A5A921863A96001A4436 /* alliance_background.jpg in Resources */,
 				2442A53F2182983C001A4436 /* LaunchScreen.storyboard in Resources */,
 				2442A53921829784001A4436 /* ligands.txt in Resources */,
+				2442A5A6218636AB001A4436 /* ActivityIndicatorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +436,7 @@
 				2442A55121850E62001A4436 /* ProteinTableViewCell.swift in Sources */,
 				2442A54521829A0F001A4436 /* ProteinListViewController.swift in Sources */,
 				2442A54D2184D0EA001A4436 /* CurrentViewContoller.swift in Sources */,
+				2442A5A7218636AB001A4436 /* ActivityIndicatorView.swift in Sources */,
 				2442A52F218292A6001A4436 /* UIAlertControllerExtension.swift in Sources */,
 				2442A533218292A6001A4436 /* BaseTableViewCell.swift in Sources */,
 				2442A5632185F461001A4436 /* SCNNodeExtension.swift in Sources */,
@@ -536,6 +575,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZPKV52D2F2;
 				INFOPLIST_FILE = "$(SRCROOT)/project/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,6 +595,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZPKV52D2F2;
 				INFOPLIST_FILE = "$(SRCROOT)/project/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
